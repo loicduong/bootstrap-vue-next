@@ -65,9 +65,9 @@ convert the value to a native number by using `Number(value)`, `parseInt(value, 
 
 ## Behavior with non-text input types
 
-All input types share the same value handling, but the browser only accepts values in the format of
-the chosen type and silently changes anything else. For example, `abc` in a `number` input becomes an
-empty string and an invalid color becomes `#000000`.
+All input types share the same value handling, but some non-text types silently sanitize values that
+do not match the format they accept. For example, `abc` in a `number` input becomes an empty string
+and an invalid color becomes `#000000`.
 
 | Feature                    | Text-like types | `number`  | `range`   | `color`   | Date and time types |
 | -------------------------- | --------------- | --------- | --------- | --------- | ------------------- |
